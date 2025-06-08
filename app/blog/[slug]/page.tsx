@@ -24,18 +24,18 @@ export function generateMetadata({ params }) {
     image,
   } = post.metadata
   let ogImage = image
-    ? image
+    ? `${baseUrl}${image}`
     : `${baseUrl}/og?title=${encodeURIComponent(title)}`
 
   return {
-    title,
+    title: `${title} | Vishal Portfolio`,
     description,
     openGraph: {
       title,
       description,
       type: 'article',
       publishedTime,
-      url: `${baseUrl}/blog/${post.slug}`,
+      url: `${baseUrl}/projects/${post.slug}`, // User-facing URL
       images: [
         {
           url: ogImage,
@@ -73,11 +73,11 @@ export default function Blog({ params }) {
             description: post.metadata.summary,
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/blog/${post.slug}`,
+              : `${baseUrl}/og?title=${encodeURIComponent(post.metadata.title)}`, // Fixed image URL
+            url: `${baseUrl}/projects/${post.slug}`,
             author: {
               '@type': 'Person',
-              name: 'My Portfolio',
+              name: 'Vishal', // Changed from 'My Portfolio' to actual name
             },
           }),
         }}

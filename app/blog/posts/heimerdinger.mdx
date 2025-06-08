@@ -1,0 +1,85 @@
+---
+title: 'Heimerdinger’s Chariot: A Robotic Walker for Bardeen Quad'
+publishedAt: '2024-06-08'
+summary: 'A hextech-inspired autonomous walker themed around Professor Heimerdinger, designed to climb grassy inclines with a motorized three-leg system and planetary gear drive.'
+---
+
+## Abstract
+
+Our team was tasked with creating a robotic walker that could traverse the incline between Boneyard Creek and the Bardeen Quad. We built a walker with three 4-bar linkage legs and two ratcheted wheels, powered by a single motor connected to a planetary gear system. The walker was themed as a "Hextech Chariot" for Professor Heimerdinger and performed well on the 80% incline track.
+
+## Project Goals & Design Specifications
+
+Goals included:
+- Uphill walking at ≥ 4 m/min
+- Full autonomy with one motor and a battery
+- Fit within 12 x 18 x 30 cm³
+- No grass damage
+- Arcane-themed, amusing and impressive design
+
+Additional design features:
+- Ratcheted rear wheels to prevent rollback
+- Planetary gear system for increased torque
+- Bevel gear system with added supports for robust contact
+
+## Detailed Design Discussion
+
+The chassis was laser-cut ¼” acrylic, with side panels holding the wheels. Most of the parts were 3D printed in PLA and fastened with M4 x 10 mm screws. The motor, mounted in a PLA sleeve, connected to a planetary gear system which fed into bevel gears.
+
+- The planetary system used a sun gear connected to the motor, spinning planets in a fixed ring gear. It had a 3:1 gear-down ratio.
+- The output from the planetary system powered a bevel gear pair that redirected torque to a shaft connecting to all three legs.
+- Each leg used a crank-rocker 4-bar linkage, with offset phasing (middle leg at 180°) for continuous ground contact.
+
+**Figure 1** – Annotated Drivetrain photograph and CAD  
+![Figure 1 – Annotated Drivetrain photograph and CAD](/images/heimerdinger-chariot/Figure 1.png)
+
+**Figure 2** – Annotated Leg-subsystem photograph and CAD  
+![Figure 2 – Annotated Leg-subsystem photograph and CAD](/images/heimerdinger-chariot/Figure 2.png)
+
+**Figure 3** – Annotated Ratchet System CAD  
+![Figure 3 – Annotated Ratchet System CAD](/images/heimerdinger-chariot/Figure 5.png)
+
+**Figure 4** – PVA Analysis for Leg Position and Gait  
+![Figure 4 – PVA Analysis for Leg Position and Gait](/images/heimerdinger-chariot/Figure 3.png)
+
+**Figure 5** – PVA Analysis for Velocity and Acceleration  
+![Figure 5 – PVA Analysis for Velocity and Acceleration](/images/heimerdinger-chariot/Figure 4.png)
+
+## Creative Theme
+
+The walker showcased Professor Heimerdinger (from *Arcane*) in his signature pose, with wrenches and an arcane claw. Painted cobalt blue with gold and bronze trim, it visually represented a hextech innovation. Cardboard rear panels enclosed the structure and completed the “chariot” look.
+
+## Mechanism Performance and Reflection
+
+On the 80% incline, the walker showed smooth movement and stable gait due to effective torque transmission. Issues included:
+- Bevel gear teeth shearing from small contact area
+- Planetary gear slippage due to clearance tolerances
+- Leg assemblies bending and detaching under load
+
+**Improvement Recommendations:**
+- Increase bevel gear size and contact
+- Tighten gear tolerances
+- Reinforce leg joints
+- Redesign gait for better ground clearance
+
+## Expense Report
+
+**Budget:** $60.93 (including $11.93 carryover from Project 1)  
+**Total Cost:** $60.72  
+- $20: Laser-cut acrylic (Jackson Studio)
+- $12.87: PLA
+- $8.00: Screws
+- ~$20: Paints and decorations
+
+Remaining budget: **$0.21**  
+
+## Appendix
+
+**Appendix A** – Bill of Materials Table  
+![Appendix A – Bill of Materials Table](/images/heimerdinger-chariot/Appendix A.png)
+
+**Appendix B** – Exploded Assembly Drawings  
+![Appendix B – Exploded Assembly Drawings](/images/heimerdinger-chariot/Appendix B.png)
+
+**Appendix C** – Velocity Calculations  
+![Appendix C – Velocity Calculations](/images/heimerdinger-chariot/Appendix C.png)

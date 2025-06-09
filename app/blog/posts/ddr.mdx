@@ -1,0 +1,87 @@
+---
+title: 'Portable DDR Pad: DIY Dance Revolution with Arduino and Bluetooth'
+publishedAt: '2023-05-14'
+summary: 'A custom-built Dance Dance Revolution pad using a pressure-switch design with aluminum foil and foam layers, Arduino integration, and optional Bluetooth connectivity for lightweight, low-cost rhythm gaming.'
+---
+
+## Abstract
+
+To bring the arcade experience home, our team built a custom, low-cost DDR (Dance Dance Revolution) dance pad using pressure-sensitive plates and Arduino. Unlike traditional pads that use expensive force sensors, we implemented a sandwich-like pressure plate design with conductive foil, foam, and wood layers. This pad can interface with a computer or mobile device via USB or Bluetooth, supporting multiple games and configurable input modes.
+
+## Project Goals & Design Specifications
+
+Goals:
+- Create a cheap, portable DDR pad
+- Ensure reliable arrow detection
+- Enable wired (USB) and wireless (Bluetooth) connections
+- Optional LED feedback on button press
+- Modular design with 4 input tiles (Up, Down, Left, Right)
+
+Design specs:
+- Pressure plates made of aluminum foil & foam
+- 48x48” plywood frame with polycarbonate tops
+- Arduino Feather M0 for input processing
+- SPI communication protocol for Bluetooth
+- Expandable design for visual effects (LEDs)
+
+## Detailed Design Discussion
+
+We opted for aluminum foil-based contact switches instead of FSRs due to cost, durability, and sensitivity concerns. The pad includes:
+
+- **Foil + Foam Sandwich Buttons**: Two foil layers separated by foam; compression triggers contact.
+- **Structural Grid**: Four runners divide the board into a 3x3 tile layout, isolating directional inputs.
+- **Optional LEDs**: Though not implemented fully, we allocated space under polycarbonate tiles for light-up feedback.
+- **Arduino Input Handling**: Four digital pins detect input and relay commands over USB/Bluetooth.
+
+### Circuit & Connection Design
+
+- Pull-down resistors stabilize signal reads and prevent floating voltage.
+- SPI protocol links the Arduino to a Bluetooth module for optional wireless play.
+- Toggled output modes: continuous character streaming for long notes, or single key press/release events for tap notes.
+
+Figure 1 – Schematic of Pad Circuit and SPI Bluetooth Wiring  
+<img src="/images/DDR/schematic.png" alt="Pad Circuit and SPI Bluetooth Wiring" style={{maxWidth: '100%', height: 'auto'}} />
+
+Figure 2 – Pressure Button Design and Layering (Exploded View)  
+<img src="/images/DDR/button.png" alt="Pressure Button Layer Design" style={{maxWidth: '100%', height: 'auto'}} />
+
+Figure 3 – Exploded View of Design  
+<img src="/images/DDR/explodeddesign.png" alt="Exploded View of Design" style={{maxWidth: '100%', height: 'auto'}} />
+
+Figure 4 – Top View of Design
+<img src="/images/DDR/top.png" alt="Button Design with Foil and Foam Layers" style={{maxWidth: '100%', height: 'auto'}} />
+
+## Construction Process
+
+The base was built from ¾” plywood. Tiles were created with routed indentations for the 6x6” polycarbonate top layers. Foam was placed beneath each button to prevent accidental contact. Cardboard slots and conductive tape ensured better pressure connection between layers.
+
+- **Runner Grid**: Held tiles in place while elevating the platform. Fillers were used in non-button zones.
+- **Connectivity**: Conductive copper tape replaced soldering, which didn’t adhere to aluminum.
+- **Mechanical Testing**: LEDs were used inline to verify connection. Flaky contact was fixed with additional foam compression and cardboard pads.
+
+Figure 5 – Fully Assembled Dance Pad  
+<img src="/images/DDR/fullassembly.png" alt="Assembled DDR Pad" style={{maxWidth: '100%', height: 'auto'}} />
+
+## Challenges & Lessons Learned
+
+- **Button Sensitivity**: Original foam was too stiff. Adding cardboard and extra foil improved responsiveness.
+- **Wiring Space**: Inadequate spacing in runners made LED wiring impossible without rework.
+- **Soldering Foil**: Learned that foil doesn’t bond with solder. Used conductive tape as a workaround.
+- **Output Modes**: Some games needed held inputs ("wwww…"), others required single taps ("w"). We added both modes to accommodate.
+- **Machine Shop Coordination**: Delays could’ve been avoided by planning manufacturing help earlier.
+
+## Future Improvements
+
+- Add LED backlighting with ripple effects
+- Develop a GUI for button remapping or mode selection
+- Use electrical tape instead of foil/glue for flat, consistent contact
+
+## A Fun Demo Video! – Portable DDR Pad in Action
+
+<video
+  controls
+  style={{maxWidth: '100%', height: 'auto'}}
+  src="/images/DDR/demo.mp4"
+>
+  Your browser does not support the video tag.
+</video>

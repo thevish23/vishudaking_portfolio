@@ -1,0 +1,70 @@
+---
+title: 'Piano Man Automata: A Crank-Driven Musical Companion'
+publishedAt: '2025-02-12'
+summary: 'A hand-cranked mechanical toy featuring a mannequin that tilts its head and mimics piano playing using a clever system of cams and linkages, accompanied optionally by a classic music box tune.'
+---
+
+## Abstract
+
+The Piano Man Automata was designed as a mechanical toy to bring a sense of calm and curiosity to its user. Through an elegant series of cams and linkages, it animates a mannequin that moves its hands like a piano player and tilts its head side to side. A built-in music box can be triggered by pushing the crank inward, adding a nostalgic layer of sensory feedback to the visual motion.
+
+## Project Goals & Design Specifications
+
+Primary goals:
+- Deliver stress-relief and visual engagement  
+- Mimic piano playing motion and head tilting  
+- Integrate optional musical output  
+- Maintain mechanical simplicity and user safety  
+- Be library-safe (silent by default)
+
+Design constraints:
+- All motion powered by a single hand crank  
+- Music box toggle without altering crank direction  
+- Non-intrusive size and clear motion path visibility  
+- Safe for ages 16+ (no finger poking!)
+
+## Detailed Design Discussion
+
+The Piano Man’s body is driven by a hand crank that powers a cam-based linkage mechanism:
+
+- The crank controls two main motions: head tilting and arm actuation.  
+- A set of cams convert rotational input into the up-down motion of the mannequin’s hands, visually imitating piano playing.  
+- A secondary linkage offsets the camshaft to tilt the head left and right, giving it a lifelike expression.  
+- The hand crank can be pushed inward to engage the music box through a mechanical switch.
+
+Figure 1 – A picture of the finished automaton!  
+<img src="/images/piano-man/pianofigure1.png" alt="A picture of the finished automaton!" style={{maxWidth: '100%', height: 'auto'}} />
+
+
+## Creative Theme
+
+ Its minimal yet expressive motions mimic human musicality, while its form factor encourages mindful engagement. Inspired by vintage toy aesthetics, it is equally at home on a desk or a bookshelf.
+
+## Mechanism Performance and Reflection
+
+The Piano Man performed reliably, producing consistent and engaging movement across all intended degrees of freedom:
+
+**Strengths:**
+- Smooth head-tilting and arm motions  
+- Intuitive user interface via crank-push toggle  
+- Durable under repeated crank cycles
+
+**Observed Issues:**
+- Slight lag in arm return due to cam clearance  
+- Sound trigger occasionally lose without full push  
+- Tolerances tight in some printed linkages causing limited head tilt range of motion.
+
+**Recommendations for Future Iterations:**
+- Refine cam profile for more fluid motion  
+- Improve spring-back on sound engagement  
+- Tweak crank-handle ergonomics with gear sleeves.
+
+## A Fun Demo Video! – Piano Man in Action
+
+<video
+  controls
+  style={{maxWidth: '100%', height: 'auto'}}
+  src="/images/piano-man/demovideo.mp4"
+>
+  Your browser does not support the video tag.
+</video>
